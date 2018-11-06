@@ -84,6 +84,7 @@ a {
 }
 
 .module-title {
+  justify-self: flex-start;
   font-size: 1.4rem;
   list-style-type: none;
   padding: 0;
