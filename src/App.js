@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import Footer from "./footer";
 import LectureList from './LectureList';
+import Search from './search';
 import LambdaSchool from "./media/lambdaschool.png";
 import './App.css';
 
@@ -16,8 +18,9 @@ class App extends Component {
 
         </header>
         <div>
+          <Search />
           <LectureList />
-
+          <Footer />
         </div>
 
       </div>

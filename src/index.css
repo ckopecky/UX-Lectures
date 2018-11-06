@@ -6,6 +6,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display:flex;
+  justify-content: center;
+  border: 5px solid black;
 }
 
 code {
@@ -15,4 +18,74 @@ code {
 
 .lecture-list-container {
   color: black;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+
 }
+
+.search-bar {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 100%;
+}
+.query-box {
+  width: 300px;
+  height: 25px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  justify-self: flex-end;
+  padding: 10px;
+  background-color: #b50808f8;
+  height: auto;
+}
+a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 5px;
+  border: 5px double white;
+}
+
+.single-lecture-block {
+  border: 5px double black;
+  background-color: whitesmoke;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.website-url {
+  color: black;
+  background-color: blanchedalmond;
+  justify-self: flex-end;
+  border: 1px solid black;
+  margin: 30px;
+
+}
+
+.unit-title {
+  justify-self:flex-start;
+  border: 1px solid black;
+  padding: 5px;
+  font-weight: bolder;
+  font-size: 1.2rem;
+  margin: 10px;
+}
+
+.module-title {
+  font-size: 1.8rem;
+  list-style-type: none;
+
+}
+
