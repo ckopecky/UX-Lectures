@@ -28,19 +28,18 @@ class LectureList extends Component {
     render() {
         console.log(this.state.lectures, "lectures");
         return (
-            <ul id="myUL" className="lecture-list-container">
+            <div className="lecture-list-container">
             {this.state.lectures.map(lecture => {
                 return(
-                    <div>
                         <div key={lecture.id} className="single-lecture-block">
                             <div className="unit-title">{lecture["Unit Title"]}</div>
-                            <li className="module-title">{lecture["Video Title"]}</li>
-                            <a className="website-url" target="_blank" rel="noopener noreferrer" href={lecture["Website-URL"]}>Lecture Video (opens in new window)</a>
+                            <div className="module-title">{lecture["Video Title"]}</div>
+                            <div className="website-url-div">
+                            <a className="website-url" target="_blank" rel="noopener noreferrer" href={lecture["Website-URL"]}>Lecture Video </a></div>
                         </div>
-                    </div>
                 )
             })}
-            </ul>
+            </div>
         );
     }
 }

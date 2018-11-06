@@ -11,13 +11,12 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img className="App-logo" src={LambdaSchool} alt="lambda-school-logo"/>
-          <p>
+          <h2>
             Lectures Database for UX1
-          </p>
+          </h2>
           <img className="App-logo" src={LambdaSchool} alt="lambda-school-logo"/>
-
         </header>
-        <div>
+        <div className="main-container">
           <LectureList />
           <Footer />
         </div>
