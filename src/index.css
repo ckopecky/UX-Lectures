@@ -62,7 +62,7 @@ a {
   justify-content: space-between;
   height: auto;
   flex-wrap: wrap;
-  margin: 20px;
+  margin: 10px;
 }
 
 .website-url {
@@ -79,12 +79,12 @@ a {
   border: 1px solid black;
   padding: 5px;
   font-weight: bolder;
-  font-size: 1.2rem;
-  margin: 10px;
+  font-size: 1rem;
+  margin: 5px;
 }
 
 .module-title {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   list-style-type: none;
 
 }
