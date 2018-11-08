@@ -32,7 +32,6 @@ class Login extends Component {
     }
 
     render(text) {
-        console.log(this.state);
         return (
             <div className="login-register-wrapper">
                 <header className="App-header">

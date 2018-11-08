@@ -43,7 +43,6 @@ class Register extends Component {
 
 
     render() {
-        console.log(this.state);
         return (
             <div className="login-register-wrapper">
                 <header className="App-header">

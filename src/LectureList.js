@@ -15,13 +15,10 @@ class LectureList extends Component {
 
     componentDidMount() {
         const token = localStorage.getItem("jwt");
-        console.log("cdm token", token);
         let promise = axios.get("https://ux1lectures.herokuapp.com/api/lectures", {headers: {Authorization: token}});
         promise
             .then((lectures) => {
-                console.log(this.state, "before");
                 this.setState({lectures: lectures.data});
-                console.log(this.state, "after");
             })
             .catch((err) => {
                 console.log(err.message);
