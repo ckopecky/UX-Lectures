@@ -37,7 +37,6 @@ class LectureList extends Component {
 
     //will need to axios request to server on CDM to get list of lectures from database then map over the list to fill in values. 
     render() {
-        console.log(this.state.lectures, "lectures");
         return (
             <div>
                 <header className="App-header">
