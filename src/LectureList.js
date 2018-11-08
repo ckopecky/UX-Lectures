@@ -10,15 +10,16 @@ class LectureList extends Component {
         "Unit Title": "",
         "Module Title": "",
         "Video Title": "",
-        "Website-URL": ""
+        "Website-URL": "",
+        loading: true
     }
 
-    componentDidMount() {
+    componentWillMount() {
         const token = localStorage.getItem("jwt");
         let promise = axios.get("https://ux1lectures.herokuapp.com/api/lectures", {headers: {Authorization: token}});
         promise
             .then((lectures) => {
-                this.setState({lectures: lectures.data});
+                this.setState({lectures: lectures.data, loading: false});
             })
             .catch((err) => {
                 console.log(err.message);
@@ -37,7 +38,13 @@ class LectureList extends Component {
 
     //will need to axios request to server on CDM to get list of lectures from database then map over the list to fill in values. 
     render() {
-        return (
+        let content;
+        if (this.state.loading) {
+            setTimeout(3000)
+            content = <div className="loading">Loading...</div>;
+        } 
+        else {
+            content =
             <div>
                 <header className="App-header">
                     <img className="App-logo" src={LambdaSchool} alt="lambda-school-logo"/>
@@ -72,8 +79,12 @@ class LectureList extends Component {
                         </div>
                     </div>
             </div>
-
-        );
+        }
+        return (
+            <div>
+              {content}
+            </div>
+          )
     }
 }
 
