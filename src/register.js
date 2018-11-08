@@ -24,7 +24,7 @@ class Register extends Component {
 
     handleClick = (e) => {
         console.log("clicked!");
-        let promise = axios.post("http://localhost:7000/auth/register", this.state);
+        let promise = axios.post("https://ux1lectures.herokuapp.com/auth/register/", this.state);
         if(this.state.password !== this.state.confirmPassword) {
             console.log("Passwords do not match! Try again.")
         } else {
@@ -33,7 +33,7 @@ class Register extends Component {
                 console.log("response", response);
                 localStorage.setItem("jwt", response.data.token);
                 console.log(localStorage.getItem("jwt"));
-                this.props.history.push("/lectures");
+                this.props.history.push("/login");
             })
             .catch(err => {
                 console.log({Error: err});
