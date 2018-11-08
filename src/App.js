@@ -1,24 +1,26 @@
 import React, { Component } from 'react';
+import { Switch, Route } from 'react-router-dom';
 import Footer from "./footer";
 import LectureList from './LectureList';
+import Login from './login';
+import Register from './register';
 import Search from './search';
-import LambdaSchool from "./media/lambdaschool.png";
 import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img className="App-logo" src={LambdaSchool} alt="lambda-school-logo"/>
-          <h2>
-            Lectures Database for UX1
-          </h2>
-          <img className="App-logo" src={LambdaSchool} alt="lambda-school-logo"/>
-        </header>
+
         <div className="main-container">
-          <LectureList />
-          <Footer />
+        {/* <Search /> */}
+        <Switch>
+          <Route exact path = "/" component={Login}/>
+          <Route path ="/login" component={Login}/>
+          <Route path ="/lectures" component={LectureList}/>
+          <Route path ="/register" component={Register}/>
+        </Switch>
+        <Footer />
         </div>
 
       </div>
