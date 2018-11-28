@@ -27,7 +27,7 @@ class Login extends Component {
                 this.props.history.push("/lectures");
             })
             .catch(err => {
-                console.log(err.message);
+                console.log("Cannot retrieve login", err.message);
             })
     }
 
