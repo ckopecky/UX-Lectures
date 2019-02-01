@@ -1,0 +1,73 @@
+.single-lecture-block {
+    height: 200px;
+    width: 40%;
+    margin: 30px;
+    display:flex;
+    border: 5px double black;
+    flex-direction: column;
+    background: lightgray;
+}
+
+.unit-title {
+    display: flex;
+    justify-self:flex-start;
+    align-items: center;
+    font-weight: bolder;
+    padding: 20px 0px;
+    background-color: #b50808f8;
+    width: 100%;
+    height: 30px;
+}
+
+.unit-title h2 {
+    margin: 20px;
+    color: white;
+    text-transform: capitalize;
+    font-family: 'Roboto';
+}
+
+.module-title {
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    align-items:center;
+    padding: 20px 0px;
+    width: 100%;
+    height: auto;
+    font-style: italic;
+    font-size: 1.2em;
+}
+
+.module-title h3{
+    margin: 20px;
+}
+
+.website-url-div{
+    background: slategray;
+    width: 40%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    margin: 10px;
+    border: 1px solid darkslategray;
+    border-radius: 3px;
+    font-size: 1.4em;
+    text-transform: capitalize;
+}
+.website-url-div:hover {
+    text-transform: uppercase;
+    background: slategray;
+    box-shadow: 4px 4px 4px slateblue;
+    color:white;
+}
+
+.website-url-div a {
+    color: white;
+    text-decoration: none;
+}
+.website-url-div a:hover {
+    color: white;
+
+}

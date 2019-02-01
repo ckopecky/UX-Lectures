@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
-import LambdaSchool from "./media/lambdaschool.png";
-
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import Header from "./Header";
+import Footer from "./Footer";
+import "../css/Login.css";
 
 class Login extends Component {
     constructor(props){
         super(props);
         this.state = {
             username: '',
-            password: ''
+            password: '',
+            loggedIn: false,
+            loading: false
         }
     }
 
@@ -23,8 +26,13 @@ class Login extends Component {
         promise
             .then(response => {
                 //localStorage set item
+                console.log(response);
                 localStorage.setItem("jwt", response.data.token);
-                this.props.history.push("/lectures");
+                this.setState({loggedIn: true});
+                this.props.history.push({
+                    pathname: '/lectures',
+                    state: { lectures: response.data.lectures, loggedIn: true, loading: false }
+                  });
             })
             .catch(err => {
                 console.log("Cannot retrieve login", err.message);
@@ -34,21 +42,16 @@ class Login extends Component {
     render(text) {
         return (
             <div className="login-register-wrapper">
-                <header className="App-header">
-                    <img className="App-logo" src={LambdaSchool} alt="lambda-school-logo"/>
-                     <h2 className="title">{"Log-in to View UX1 Lectures"} </h2>
-                     <img className="App-logo" src={LambdaSchool} alt="lambda-school-logo"/>
-                </header>
+                <Header headerTitle={this.props.headerTitle}/>
                 <div className="form-wrapper">
                     <label>Username:</label>
                     <input className="input-text" name="username" value={this.state.username} type="text" onChange={this.handleChange}/>
                     <label>Password:</label>
                     <input className="input-text" name="password" value={this.state.password} type="password" onChange={this.handleChange}/>
-                    <div><button className="submit-button" onClick={this.handleClick}>Log-in</button></div>
+                    <button className="submit-button" onClick={this.handleClick}>Log-in</button>
                     <div className="register-link"><Link to="/register" className="link-style">New User? Register Here!</Link></div>
                 </div>
-                
-
+                <Footer />
             </div>
         );
     }

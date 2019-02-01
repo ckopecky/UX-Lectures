@@ -1,0 +1,27 @@
+.footer {
+    width: 100%;
+    background: #b50808f8;
+    height: auto;
+    color: whitesmoke;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.link-style-footer {
+    display:flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.link-style-footer img {
+    height: 75px;
+}
+
+.link-style-footer span {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 1.8em;
+}

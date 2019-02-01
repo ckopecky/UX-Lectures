@@ -1,0 +1,13 @@
+.lecture-list-container-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.lecture-list-container {
+    width: 100%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: slategray;
+}

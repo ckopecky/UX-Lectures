@@ -1,0 +1,55 @@
+.login-register-wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+}
+
+.form-wrapper input {
+    height: 50px;
+    width: 100%;
+    margin: 20px 0px;
+}
+
+.form-wrapper label {
+    font-size: 1.8em;
+    margin: 20px 0px;
+    width: 100%;
+}
+
+.form-wrapper button {
+    margin: 20px auto;
+    width: 400px;
+    height: 40px;
+    background-color: darkslategray;
+    justify-self: flex-end;
+    align-self: flex-end;
+    color: white;
+
+}
+
+.form-input {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+
+.form-input label {
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+    margin-right: 20px;
+}

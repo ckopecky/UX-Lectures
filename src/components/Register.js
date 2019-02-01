@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import LambdaSchool from "./media/lambdaschool.png";
 import { Link } from 'react-router-dom';
+import Header from "./Header";
+import Footer from "./Footer";
+import "../css/Login.css";
 
 class Register extends Component {
     constructor(props){
@@ -45,11 +47,7 @@ class Register extends Component {
     render() {
         return (
             <div className="login-register-wrapper">
-                <header className="App-header">
-                    <img className="App-logo" src={LambdaSchool} alt="lambda-school-logo"/>
-                     <h2 className="title">{"New User? Register to View UX1 Lectures"} </h2>
-                     <img className="App-logo" src={LambdaSchool} alt="lambda-school-logo"/>
-                </header>
+            <Header headerTitle={this.props.headerTitle}/>
                 <div className="form-wrapper">
                     <div className="form-input">
                         <label>First Name:</label>
@@ -73,14 +71,14 @@ class Register extends Component {
                     </div>
                     <div className="form-input">
                         <label>Confirm Password:</label>
-                        <input className="input-text" onChange={this.handleChange} type="password" name="confirmPassword" value={this.state.confirmPassword} required={true} placeholder="Must be at least 8 chars"/></div>
-                    <div className="form-input">
-                        <div className="submit-button" onClick={this.handleClick}>Register User
-                        </div>
-                        <div className="register-link"><Link to="/login" className="link-style">Already have an account? Log in here.</Link>
-                        </div>
+                        <input className="input-text" onChange={this.handleChange} type="password" name="confirmPassword" value={this.state.confirmPassword} required={true} placeholder="Must be at least 8 chars"/>
+                    </div>
+                    <button className="submit-button" onClick={this.handleClick}>Register User
+                    </button>
+                    <div className="register-link"><Link to="/login" className="link-style">Already have an account? Log in here.</Link>
                     </div>
                 </div>
+            <Footer />
             </div>
         );
     }

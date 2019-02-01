@@ -1,0 +1,15 @@
+.App-header {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: #b50808f8;
+    color: whitesmoke;
+    font-size: 1.8em;
+}
+
+.App-logo {
+    width: 48px;
+    height: 48px;
+    margin: 20px;
+}
